@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- Greeting and Search Bar -->
+
+    <TextView
+        android:id="@+id/greetingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="👋 Hey <user first name>"
+        android:textStyle="bold"
+        android:textColor="#282833"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/subGreetingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greetingMessage"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#6C6C89"
+        android:text="Discover tasty and healthy recipi"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_below="@id/subGreetingMessage"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="    Search any recipe"
+        android:drawableStart="@drawable/ic_search"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/search_bar_background" />
+
+    <!-- Popular Recipes Section -->
+
+    <TextView
+        android:id="@+id/popularRecipesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Popular Recipes"
+        android:textColor="#171B21"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popularRecipesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popularRecipesLabel"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal" />
+
+
+    <!-- All Recipes Section -->
+    <TextView
+        android:id="@+id/allRecipesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popularRecipesRecyclerView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="All recipes"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allRecipesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/allRecipesLabel"
+        android:layout_marginTop="8dp" />
+
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled" />
+
+
+
+</RelativeLayout>
