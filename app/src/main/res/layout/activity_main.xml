@@ -15,9 +15,9 @@
         android:id="@+id/greetingMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="46dp"
         android:layout_marginStart="16dp"
-        android:text="👋 Hey <user first name>"
+        android:text="👋 Hey Deepak Khatana"
         android:textStyle="bold"
         android:textColor="#282833"
         android:textSize="16sp" />
@@ -42,6 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:hint="    Search any recipe"
+        android:textColorHint="@color/black"
         android:drawableStart="@drawable/ic_search"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
@@ -79,6 +80,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:text="All recipes"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -86,8 +88,10 @@
         android:id="@+id/allRecipesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
         android:layout_below="@id/allRecipesLabel"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp" />
 
 
 
@@ -96,8 +100,11 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="#FF5722"
+        app:itemTextColor="#FF5722"
         app:labelVisibilityMode="labeled" />
 
 
